@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-socket.io-redis/socket.io-redis/index.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-socket.io-redis/node_modules/socket.io-redis/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-socket.io-redis">npmtest-socket.io-redis (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-socket.io-redis/socket.io-redis/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-socket.io-redis/node_modules/socket.io-redis/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">4.27% <small>(16 / 375)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-socket.io-redis/socket.io-redis/</a> » index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-socket.io-redis/node_modules/socket.io-redis/</a> &#187; index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -1926,39 +1928,39 @@ var requestTypes = {
  * @api public
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function adapter(uri, opts) {</span>
-<span class="cstat-no" title="statement not covered">  opts = opts || {};</span>
+<span class="fstat-no" title="function not covered" >function adapter(uri, opts) {</span>
+<span class="cstat-no" title="statement not covered" >  opts = opts || {};</span>
 &nbsp;
   // handle options only
-<span class="cstat-no" title="statement not covered">  if ('object' == typeof uri) {</span>
-<span class="cstat-no" title="statement not covered">    opts = uri;</span>
-<span class="cstat-no" title="statement not covered">    uri = null;</span>
+<span class="cstat-no" title="statement not covered" >  if ('object' == typeof uri) {</span>
+<span class="cstat-no" title="statement not covered" >    opts = uri;</span>
+<span class="cstat-no" title="statement not covered" >    uri = null;</span>
   }
 &nbsp;
   // opts
-<span class="cstat-no" title="statement not covered">  var pub = opts.pubClient;</span>
-<span class="cstat-no" title="statement not covered">  var sub = opts.subClient;</span>
+<span class="cstat-no" title="statement not covered" >  var pub = opts.pubClient;</span>
+<span class="cstat-no" title="statement not covered" >  var sub = opts.subClient;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var prefix = opts.key || 'socket.io';</span>
-<span class="cstat-no" title="statement not covered">  var subEvent = opts.subEvent || 'messageBuffer';</span>
-<span class="cstat-no" title="statement not covered">  var requestsTimeout = opts.requestsTimeout || 1000;</span>
-<span class="cstat-no" title="statement not covered">  var withChannelMultiplexing = false !== opts.withChannelMultiplexing;</span>
+<span class="cstat-no" title="statement not covered" >  var prefix = opts.key || 'socket.io';</span>
+<span class="cstat-no" title="statement not covered" >  var subEvent = opts.subEvent || 'messageBuffer';</span>
+<span class="cstat-no" title="statement not covered" >  var requestsTimeout = opts.requestsTimeout || 1000;</span>
+<span class="cstat-no" title="statement not covered" >  var withChannelMultiplexing = false !== opts.withChannelMultiplexing;</span>
 &nbsp;
   // init clients if needed
-<span class="fstat-no" title="function not covered">  function createClient() {</span>
-<span class="cstat-no" title="statement not covered">    if (uri) {</span>
+<span class="fstat-no" title="function not covered" >  function createClient() {</span>
+<span class="cstat-no" title="statement not covered" >    if (uri) {</span>
       // handle uri string
-<span class="cstat-no" title="statement not covered">      return redis(uri, opts);</span>
+<span class="cstat-no" title="statement not covered" >      return redis(uri, opts);</span>
     } else {
-<span class="cstat-no" title="statement not covered">      return redis(opts);</span>
+<span class="cstat-no" title="statement not covered" >      return redis(opts);</span>
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (!pub) <span class="cstat-no" title="statement not covered">pub = createClient();</span></span>
-<span class="cstat-no" title="statement not covered">  if (!sub) <span class="cstat-no" title="statement not covered">sub = createClient();</span></span>
+<span class="cstat-no" title="statement not covered" >  if (!pub) <span class="cstat-no" title="statement not covered" >pub = createClient();</span></span>
+<span class="cstat-no" title="statement not covered" >  if (!sub) <span class="cstat-no" title="statement not covered" >sub = createClient();</span></span>
 &nbsp;
   // this server's key
-<span class="cstat-no" title="statement not covered">  var uid = uid2(6);</span>
+<span class="cstat-no" title="statement not covered" >  var uid = uid2(6);</span>
 &nbsp;
   /**
    * Adapter constructor.
@@ -1967,52 +1969,52 @@ var requestTypes = {
    * @api public
    */
 &nbsp;
-<span class="fstat-no" title="function not covered">  function Redis(nsp){</span>
-<span class="cstat-no" title="statement not covered">    Adapter.call(this, nsp);</span>
+<span class="fstat-no" title="function not covered" >  function Redis(nsp){</span>
+<span class="cstat-no" title="statement not covered" >    Adapter.call(this, nsp);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    this.uid = uid;</span>
-<span class="cstat-no" title="statement not covered">    this.prefix = prefix;</span>
-<span class="cstat-no" title="statement not covered">    this.requestsTimeout = requestsTimeout;</span>
-<span class="cstat-no" title="statement not covered">    this.withChannelMultiplexing = withChannelMultiplexing;</span>
+<span class="cstat-no" title="statement not covered" >    this.uid = uid;</span>
+<span class="cstat-no" title="statement not covered" >    this.prefix = prefix;</span>
+<span class="cstat-no" title="statement not covered" >    this.requestsTimeout = requestsTimeout;</span>
+<span class="cstat-no" title="statement not covered" >    this.withChannelMultiplexing = withChannelMultiplexing;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    this.channel = prefix + '#' + nsp.name + '#';</span>
-<span class="cstat-no" title="statement not covered">    this.requestChannel = prefix + '-request#' + this.nsp.name + '#';</span>
-<span class="cstat-no" title="statement not covered">    this.responseChannel = prefix + '-response#' + this.nsp.name + '#';</span>
-<span class="cstat-no" title="statement not covered">    this.requests = {};</span>
-<span class="cstat-no" title="statement not covered">    this.customHook = <span class="fstat-no" title="function not covered">function(data, cb){</span> <span class="cstat-no" title="statement not covered">cb(null); </span>}</span>
+<span class="cstat-no" title="statement not covered" >    this.channel = prefix + '#' + nsp.name + '#';</span>
+<span class="cstat-no" title="statement not covered" >    this.requestChannel = prefix + '-request#' + this.nsp.name + '#';</span>
+<span class="cstat-no" title="statement not covered" >    this.responseChannel = prefix + '-response#' + this.nsp.name + '#';</span>
+<span class="cstat-no" title="statement not covered" >    this.requests = {};</span>
+<span class="cstat-no" title="statement not covered" >    this.customHook = <span class="fstat-no" title="function not covered" >function(data, cb){</span> <span class="cstat-no" title="statement not covered" >cb(null); </span>}</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (String.prototype.startsWith) {</span>
-<span class="cstat-no" title="statement not covered">      this.channelMatches = <span class="fstat-no" title="function not covered">function (messageChannel, subscribedChannel) {</span></span>
-<span class="cstat-no" title="statement not covered">        return messageChannel.startsWith(subscribedChannel);</span>
+<span class="cstat-no" title="statement not covered" >    if (String.prototype.startsWith) {</span>
+<span class="cstat-no" title="statement not covered" >      this.channelMatches = <span class="fstat-no" title="function not covered" >function (messageChannel, subscribedChannel) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return messageChannel.startsWith(subscribedChannel);</span>
       }
     } else { // Fallback to other impl for older Node.js
-<span class="cstat-no" title="statement not covered">      this.channelMatches = <span class="fstat-no" title="function not covered">function (messageChannel, subscribedChannel) {</span></span>
-<span class="cstat-no" title="statement not covered">        return messageChannel.substr(0, subscribedChannel.length) === subscribedChannel;</span>
+<span class="cstat-no" title="statement not covered" >      this.channelMatches = <span class="fstat-no" title="function not covered" >function (messageChannel, subscribedChannel) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return messageChannel.substr(0, subscribedChannel.length) === subscribedChannel;</span>
       }
     }
-<span class="cstat-no" title="statement not covered">    this.pubClient = pub;</span>
-<span class="cstat-no" title="statement not covered">    this.subClient = sub;</span>
+<span class="cstat-no" title="statement not covered" >    this.pubClient = pub;</span>
+<span class="cstat-no" title="statement not covered" >    this.subClient = sub;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var self = this;</span>
+<span class="cstat-no" title="statement not covered" >    var self = this;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    sub.subscribe([this.channel, this.requestChannel, this.responseChannel], <span class="fstat-no" title="function not covered">function(err){</span></span>
-<span class="cstat-no" title="statement not covered">      if (err) <span class="cstat-no" title="statement not covered">self.emit('error', err);</span></span>
+<span class="cstat-no" title="statement not covered" >    sub.subscribe([this.channel, this.requestChannel, this.responseChannel], <span class="fstat-no" title="function not covered" >function(err){</span></span>
+<span class="cstat-no" title="statement not covered" >      if (err) <span class="cstat-no" title="statement not covered" >self.emit('error', err);</span></span>
     });
 &nbsp;
-<span class="cstat-no" title="statement not covered">    sub.on(subEvent, this.onmessage.bind(this));</span>
+<span class="cstat-no" title="statement not covered" >    sub.on(subEvent, this.onmessage.bind(this));</span>
 &nbsp;
-<span class="fstat-no" title="function not covered">    function onError(err) {</span>
-<span class="cstat-no" title="statement not covered">      self.emit('error', err);</span>
+<span class="fstat-no" title="function not covered" >    function onError(err) {</span>
+<span class="cstat-no" title="statement not covered" >      self.emit('error', err);</span>
     }
-<span class="cstat-no" title="statement not covered">    pub.on('error', onError);</span>
-<span class="cstat-no" title="statement not covered">    sub.on('error', onError);</span>
+<span class="cstat-no" title="statement not covered" >    pub.on('error', onError);</span>
+<span class="cstat-no" title="statement not covered" >    sub.on('error', onError);</span>
   }
 &nbsp;
   /**
    * Inherits from `Adapter`.
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered">  Redis.prototype.__proto__ = Adapter.prototype;</span>
+<span class="cstat-no" title="statement not covered" >  Redis.prototype.__proto__ = Adapter.prototype;</span>
 &nbsp;
   /**
    * Called with a subscription message
@@ -2020,35 +2022,35 @@ var requestTypes = {
    * @api private
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered">  Redis.prototype.onmessage = <span class="fstat-no" title="function not covered">function(channel, msg){</span></span>
-<span class="cstat-no" title="statement not covered">    channel = channel.toString();</span>
+<span class="cstat-no" title="statement not covered" >  Redis.prototype.onmessage = <span class="fstat-no" title="function not covered" >function(channel, msg){</span></span>
+<span class="cstat-no" title="statement not covered" >    channel = channel.toString();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (this.channelMatches(channel, this.requestChannel)) {</span>
-<span class="cstat-no" title="statement not covered">      return this.onrequest(channel, msg);</span>
-    } else <span class="cstat-no" title="statement not covered">if (this.channelMatches(channel, this.responseChannel)) {</span>
-<span class="cstat-no" title="statement not covered">      return this.onresponse(channel, msg);</span>
-    } else <span class="cstat-no" title="statement not covered">if (!this.channelMatches(channel, this.channel)) {</span>
-<span class="cstat-no" title="statement not covered">      return debug('ignore different channel');</span>
+<span class="cstat-no" title="statement not covered" >    if (this.channelMatches(channel, this.requestChannel)) {</span>
+<span class="cstat-no" title="statement not covered" >      return this.onrequest(channel, msg);</span>
+    } else <span class="cstat-no" title="statement not covered" >if (this.channelMatches(channel, this.responseChannel)) {</span>
+<span class="cstat-no" title="statement not covered" >      return this.onresponse(channel, msg);</span>
+    } else <span class="cstat-no" title="statement not covered" >if (!this.channelMatches(channel, this.channel)) {</span>
+<span class="cstat-no" title="statement not covered" >      return debug('ignore different channel');</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var args = msgpack.decode(msg);</span>
-<span class="cstat-no" title="statement not covered">    var packet;</span>
+<span class="cstat-no" title="statement not covered" >    var args = msgpack.decode(msg);</span>
+<span class="cstat-no" title="statement not covered" >    var packet;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (uid == args.shift()) <span class="cstat-no" title="statement not covered">return debug('ignore same uid');</span></span>
+<span class="cstat-no" title="statement not covered" >    if (uid == args.shift()) <span class="cstat-no" title="statement not covered" >return debug('ignore same uid');</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    packet = args[0];</span>
+<span class="cstat-no" title="statement not covered" >    packet = args[0];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (packet &amp;&amp; packet.nsp === undefined) {</span>
-<span class="cstat-no" title="statement not covered">      packet.nsp = '/';</span>
+<span class="cstat-no" title="statement not covered" >    if (packet &amp;&amp; packet.nsp === undefined) {</span>
+<span class="cstat-no" title="statement not covered" >      packet.nsp = '/';</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (!packet || packet.nsp != this.nsp.name) {</span>
-<span class="cstat-no" title="statement not covered">      return debug('ignore different namespace');</span>
+<span class="cstat-no" title="statement not covered" >    if (!packet || packet.nsp != this.nsp.name) {</span>
+<span class="cstat-no" title="statement not covered" >      return debug('ignore different namespace');</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    args.push(true);</span>
+<span class="cstat-no" title="statement not covered" >    args.push(true);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    this.broadcast.apply(this, args);</span>
+<span class="cstat-no" title="statement not covered" >    this.broadcast.apply(this, args);</span>
   };
 &nbsp;
   /**
@@ -2057,126 +2059,126 @@ var requestTypes = {
    * @api private
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered">  Redis.prototype.onrequest = <span class="fstat-no" title="function not covered">function(channel, msg){</span></span>
-<span class="cstat-no" title="statement not covered">    var self = this;</span>
-<span class="cstat-no" title="statement not covered">    var request;</span>
+<span class="cstat-no" title="statement not covered" >  Redis.prototype.onrequest = <span class="fstat-no" title="function not covered" >function(channel, msg){</span></span>
+<span class="cstat-no" title="statement not covered" >    var self = this;</span>
+<span class="cstat-no" title="statement not covered" >    var request;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    try {</span>
-<span class="cstat-no" title="statement not covered">      request = JSON.parse(msg);</span>
+<span class="cstat-no" title="statement not covered" >    try {</span>
+<span class="cstat-no" title="statement not covered" >      request = JSON.parse(msg);</span>
     } catch(err){
-<span class="cstat-no" title="statement not covered">      self.emit('error', err);</span>
-<span class="cstat-no" title="statement not covered">      return;</span>
+<span class="cstat-no" title="statement not covered" >      self.emit('error', err);</span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    debug('received request %j', request);</span>
+<span class="cstat-no" title="statement not covered" >    debug('received request %j', request);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    switch (request.type) {</span>
+<span class="cstat-no" title="statement not covered" >    switch (request.type) {</span>
 &nbsp;
       case requestTypes.clients:
-<span class="cstat-no" title="statement not covered">        Adapter.prototype.clients.call(self, request.rooms, <span class="fstat-no" title="function not covered">function(err, clients){</span></span>
-<span class="cstat-no" title="statement not covered">          if(err){</span>
-<span class="cstat-no" title="statement not covered">            self.emit('error', err);</span>
-<span class="cstat-no" title="statement not covered">            return;</span>
+<span class="cstat-no" title="statement not covered" >        Adapter.prototype.clients.call(self, request.rooms, <span class="fstat-no" title="function not covered" >function(err, clients){</span></span>
+<span class="cstat-no" title="statement not covered" >          if(err){</span>
+<span class="cstat-no" title="statement not covered" >            self.emit('error', err);</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
           }
 &nbsp;
-<span class="cstat-no" title="statement not covered">          var response = JSON.stringify({</span>
+<span class="cstat-no" title="statement not covered" >          var response = JSON.stringify({</span>
             requestid: request.requestid,
             clients: clients
           });
 &nbsp;
-<span class="cstat-no" title="statement not covered">          pub.publish(self.responseChannel, response);</span>
+<span class="cstat-no" title="statement not covered" >          pub.publish(self.responseChannel, response);</span>
         });
-<span class="cstat-no" title="statement not covered">        break;</span>
+<span class="cstat-no" title="statement not covered" >        break;</span>
 &nbsp;
       case requestTypes.clientRooms:
-<span class="cstat-no" title="statement not covered">        Adapter.prototype.clientRooms.call(self, request.sid, <span class="fstat-no" title="function not covered">function(err, rooms){</span></span>
-<span class="cstat-no" title="statement not covered">          if(err){</span>
-<span class="cstat-no" title="statement not covered">            self.emit('error', err);</span>
-<span class="cstat-no" title="statement not covered">            return;</span>
+<span class="cstat-no" title="statement not covered" >        Adapter.prototype.clientRooms.call(self, request.sid, <span class="fstat-no" title="function not covered" >function(err, rooms){</span></span>
+<span class="cstat-no" title="statement not covered" >          if(err){</span>
+<span class="cstat-no" title="statement not covered" >            self.emit('error', err);</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
           }
 &nbsp;
-<span class="cstat-no" title="statement not covered">          if (!rooms) { <span class="cstat-no" title="statement not covered">return; </span>}</span>
+<span class="cstat-no" title="statement not covered" >          if (!rooms) { <span class="cstat-no" title="statement not covered" >return; </span>}</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">          var response = JSON.stringify({</span>
+<span class="cstat-no" title="statement not covered" >          var response = JSON.stringify({</span>
             requestid: request.requestid,
             rooms: rooms
           });
 &nbsp;
-<span class="cstat-no" title="statement not covered">          pub.publish(self.responseChannel, response);</span>
+<span class="cstat-no" title="statement not covered" >          pub.publish(self.responseChannel, response);</span>
         });
-<span class="cstat-no" title="statement not covered">        break;</span>
+<span class="cstat-no" title="statement not covered" >        break;</span>
 &nbsp;
       case requestTypes.allRooms:
 &nbsp;
-<span class="cstat-no" title="statement not covered">        var response = JSON.stringify({</span>
+<span class="cstat-no" title="statement not covered" >        var response = JSON.stringify({</span>
           requestid: request.requestid,
           rooms: Object.keys(this.rooms)
         });
 &nbsp;
-<span class="cstat-no" title="statement not covered">        pub.publish(self.responseChannel, response);</span>
-<span class="cstat-no" title="statement not covered">        break;</span>
+<span class="cstat-no" title="statement not covered" >        pub.publish(self.responseChannel, response);</span>
+<span class="cstat-no" title="statement not covered" >        break;</span>
 &nbsp;
       case requestTypes.remoteJoin:
 &nbsp;
-<span class="cstat-no" title="statement not covered">        var socket = this.nsp.connected[request.sid];</span>
-<span class="cstat-no" title="statement not covered">        if (!socket) { <span class="cstat-no" title="statement not covered">return; </span>}</span>
+<span class="cstat-no" title="statement not covered" >        var socket = this.nsp.connected[request.sid];</span>
+<span class="cstat-no" title="statement not covered" >        if (!socket) { <span class="cstat-no" title="statement not covered" >return; </span>}</span>
 &nbsp;
-<span class="fstat-no" title="function not covered">        function sendAck(){</span>
-<span class="cstat-no" title="statement not covered">          var response = JSON.stringify({</span>
+<span class="fstat-no" title="function not covered" >        function sendAck(){</span>
+<span class="cstat-no" title="statement not covered" >          var response = JSON.stringify({</span>
             requestid: request.requestid
           });
 &nbsp;
-<span class="cstat-no" title="statement not covered">          pub.publish(self.responseChannel, response);</span>
+<span class="cstat-no" title="statement not covered" >          pub.publish(self.responseChannel, response);</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered">        socket.join(request.room, sendAck);</span>
-<span class="cstat-no" title="statement not covered">        break;</span>
+<span class="cstat-no" title="statement not covered" >        socket.join(request.room, sendAck);</span>
+<span class="cstat-no" title="statement not covered" >        break;</span>
 &nbsp;
       case requestTypes.remoteLeave:
 &nbsp;
-<span class="cstat-no" title="statement not covered">        var socket = this.nsp.connected[request.sid];</span>
-<span class="cstat-no" title="statement not covered">        if (!socket) { <span class="cstat-no" title="statement not covered">return; </span>}</span>
+<span class="cstat-no" title="statement not covered" >        var socket = this.nsp.connected[request.sid];</span>
+<span class="cstat-no" title="statement not covered" >        if (!socket) { <span class="cstat-no" title="statement not covered" >return; </span>}</span>
 &nbsp;
-<span class="fstat-no" title="function not covered">        function sendAck(){</span>
-<span class="cstat-no" title="statement not covered">          var response = JSON.stringify({</span>
+<span class="fstat-no" title="function not covered" >        function sendAck(){</span>
+<span class="cstat-no" title="statement not covered" >          var response = JSON.stringify({</span>
             requestid: request.requestid
           });
 &nbsp;
-<span class="cstat-no" title="statement not covered">          pub.publish(self.responseChannel, response);</span>
+<span class="cstat-no" title="statement not covered" >          pub.publish(self.responseChannel, response);</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered">        socket.leave(request.room, sendAck);</span>
-<span class="cstat-no" title="statement not covered">        break;</span>
+<span class="cstat-no" title="statement not covered" >        socket.leave(request.room, sendAck);</span>
+<span class="cstat-no" title="statement not covered" >        break;</span>
 &nbsp;
       case requestTypes.remoteDisconnect:
 &nbsp;
-<span class="cstat-no" title="statement not covered">        var socket = this.nsp.connected[request.sid];</span>
-<span class="cstat-no" title="statement not covered">        if (!socket) { <span class="cstat-no" title="statement not covered">return; </span>}</span>
+<span class="cstat-no" title="statement not covered" >        var socket = this.nsp.connected[request.sid];</span>
+<span class="cstat-no" title="statement not covered" >        if (!socket) { <span class="cstat-no" title="statement not covered" >return; </span>}</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">        socket.disconnect(request.close);</span>
+<span class="cstat-no" title="statement not covered" >        socket.disconnect(request.close);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">        var response = JSON.stringify({</span>
+<span class="cstat-no" title="statement not covered" >        var response = JSON.stringify({</span>
           requestid: request.requestid
         });
 &nbsp;
-<span class="cstat-no" title="statement not covered">        pub.publish(self.responseChannel, response);</span>
-<span class="cstat-no" title="statement not covered">        break;</span>
+<span class="cstat-no" title="statement not covered" >        pub.publish(self.responseChannel, response);</span>
+<span class="cstat-no" title="statement not covered" >        break;</span>
 &nbsp;
       case requestTypes.customRequest:
-<span class="cstat-no" title="statement not covered">        this.customHook(request.data, <span class="fstat-no" title="function not covered">function(data) {</span></span>
+<span class="cstat-no" title="statement not covered" >        this.customHook(request.data, <span class="fstat-no" title="function not covered" >function(data) {</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">          var response = JSON.stringify({</span>
+<span class="cstat-no" title="statement not covered" >          var response = JSON.stringify({</span>
             requestid: request.requestid,
             data: data
           });
 &nbsp;
-<span class="cstat-no" title="statement not covered">          pub.publish(self.responseChannel, response);</span>
+<span class="cstat-no" title="statement not covered" >          pub.publish(self.responseChannel, response);</span>
         });
 &nbsp;
-<span class="cstat-no" title="statement not covered">        break;</span>
+<span class="cstat-no" title="statement not covered" >        break;</span>
 &nbsp;
       default:
-<span class="cstat-no" title="statement not covered">        debug('ignoring unknown request type: %s', request.type);</span>
+<span class="cstat-no" title="statement not covered" >        debug('ignoring unknown request type: %s', request.type);</span>
     }
   };
 &nbsp;
@@ -2186,90 +2188,90 @@ var requestTypes = {
    * @api private
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered">  Redis.prototype.onresponse = <span class="fstat-no" title="function not covered">function(channel, msg){</span></span>
-<span class="cstat-no" title="statement not covered">    var self = this;</span>
-<span class="cstat-no" title="statement not covered">    var response;</span>
+<span class="cstat-no" title="statement not covered" >  Redis.prototype.onresponse = <span class="fstat-no" title="function not covered" >function(channel, msg){</span></span>
+<span class="cstat-no" title="statement not covered" >    var self = this;</span>
+<span class="cstat-no" title="statement not covered" >    var response;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    try {</span>
-<span class="cstat-no" title="statement not covered">      response = JSON.parse(msg);</span>
+<span class="cstat-no" title="statement not covered" >    try {</span>
+<span class="cstat-no" title="statement not covered" >      response = JSON.parse(msg);</span>
     } catch(err){
-<span class="cstat-no" title="statement not covered">      self.emit('error', err);</span>
-<span class="cstat-no" title="statement not covered">      return;</span>
+<span class="cstat-no" title="statement not covered" >      self.emit('error', err);</span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (!response.requestid || !self.requests[response.requestid]) {</span>
-<span class="cstat-no" title="statement not covered">      debug('ignoring unknown request');</span>
-<span class="cstat-no" title="statement not covered">      return;</span>
+<span class="cstat-no" title="statement not covered" >    if (!response.requestid || !self.requests[response.requestid]) {</span>
+<span class="cstat-no" title="statement not covered" >      debug('ignoring unknown request');</span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    debug('received response %j', response);</span>
+<span class="cstat-no" title="statement not covered" >    debug('received response %j', response);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var request = self.requests[response.requestid];</span>
+<span class="cstat-no" title="statement not covered" >    var request = self.requests[response.requestid];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    switch (request.type) {</span>
+<span class="cstat-no" title="statement not covered" >    switch (request.type) {</span>
 &nbsp;
       case requestTypes.clients:
-<span class="cstat-no" title="statement not covered">        request.msgCount++;</span>
+<span class="cstat-no" title="statement not covered" >        request.msgCount++;</span>
 &nbsp;
         // ignore if response does not contain 'clients' key
-<span class="cstat-no" title="statement not covered">        if(!response.clients || !Array.isArray(response.clients)) <span class="cstat-no" title="statement not covered">return;</span></span>
+<span class="cstat-no" title="statement not covered" >        if(!response.clients || !Array.isArray(response.clients)) <span class="cstat-no" title="statement not covered" >return;</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">        for(var i = 0; i &lt; response.clients.length; i++){</span>
-<span class="cstat-no" title="statement not covered">          request.clients[response.clients[i]] = true;</span>
+<span class="cstat-no" title="statement not covered" >        for(var i = 0; i &lt; response.clients.length; i++){</span>
+<span class="cstat-no" title="statement not covered" >          request.clients[response.clients[i]] = true;</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered">        if (request.msgCount === request.numsub) {</span>
-<span class="cstat-no" title="statement not covered">          clearTimeout(request.timeout);</span>
-<span class="cstat-no" title="statement not covered">          if (request.callback) <span class="cstat-no" title="statement not covered">process.nextTick(request.callback.bind(null, null, Object.keys(request.clients)));</span></span>
-<span class="cstat-no" title="statement not covered">          delete self.requests[request.requestid];</span>
+<span class="cstat-no" title="statement not covered" >        if (request.msgCount === request.numsub) {</span>
+<span class="cstat-no" title="statement not covered" >          clearTimeout(request.timeout);</span>
+<span class="cstat-no" title="statement not covered" >          if (request.callback) <span class="cstat-no" title="statement not covered" >process.nextTick(request.callback.bind(null, null, Object.keys(request.clients)));</span></span>
+<span class="cstat-no" title="statement not covered" >          delete self.requests[request.requestid];</span>
         }
-<span class="cstat-no" title="statement not covered">        break;</span>
+<span class="cstat-no" title="statement not covered" >        break;</span>
 &nbsp;
       case requestTypes.clientRooms:
-<span class="cstat-no" title="statement not covered">        clearTimeout(request.timeout);</span>
-<span class="cstat-no" title="statement not covered">        if (request.callback) <span class="cstat-no" title="statement not covered">process.nextTick(request.callback.bind(null, null, response.rooms));</span></span>
-<span class="cstat-no" title="statement not covered">        delete self.requests[request.requestid];</span>
-<span class="cstat-no" title="statement not covered">        break;</span>
+<span class="cstat-no" title="statement not covered" >        clearTimeout(request.timeout);</span>
+<span class="cstat-no" title="statement not covered" >        if (request.callback) <span class="cstat-no" title="statement not covered" >process.nextTick(request.callback.bind(null, null, response.rooms));</span></span>
+<span class="cstat-no" title="statement not covered" >        delete self.requests[request.requestid];</span>
+<span class="cstat-no" title="statement not covered" >        break;</span>
 &nbsp;
       case requestTypes.allRooms:
-<span class="cstat-no" title="statement not covered">        request.msgCount++;</span>
+<span class="cstat-no" title="statement not covered" >        request.msgCount++;</span>
 &nbsp;
         // ignore if response does not contain 'rooms' key
-<span class="cstat-no" title="statement not covered">        if(!response.rooms || !Array.isArray(response.rooms)) <span class="cstat-no" title="statement not covered">return;</span></span>
+<span class="cstat-no" title="statement not covered" >        if(!response.rooms || !Array.isArray(response.rooms)) <span class="cstat-no" title="statement not covered" >return;</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">        for(var i = 0; i &lt; response.rooms.length; i++){</span>
-<span class="cstat-no" title="statement not covered">          request.rooms[response.rooms[i]] = true;</span>
+<span class="cstat-no" title="statement not covered" >        for(var i = 0; i &lt; response.rooms.length; i++){</span>
+<span class="cstat-no" title="statement not covered" >          request.rooms[response.rooms[i]] = true;</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered">        if (request.msgCount === request.numsub) {</span>
-<span class="cstat-no" title="statement not covered">          clearTimeout(request.timeout);</span>
-<span class="cstat-no" title="statement not covered">          if (request.callback) <span class="cstat-no" title="statement not covered">process.nextTick(request.callback.bind(null, null, Object.keys(request.rooms)));</span></span>
-<span class="cstat-no" title="statement not covered">          delete self.requests[request.requestid];</span>
+<span class="cstat-no" title="statement not covered" >        if (request.msgCount === request.numsub) {</span>
+<span class="cstat-no" title="statement not covered" >          clearTimeout(request.timeout);</span>
+<span class="cstat-no" title="statement not covered" >          if (request.callback) <span class="cstat-no" title="statement not covered" >process.nextTick(request.callback.bind(null, null, Object.keys(request.rooms)));</span></span>
+<span class="cstat-no" title="statement not covered" >          delete self.requests[request.requestid];</span>
         }
-<span class="cstat-no" title="statement not covered">        break;</span>
+<span class="cstat-no" title="statement not covered" >        break;</span>
 &nbsp;
       case requestTypes.remoteJoin:
       case requestTypes.remoteLeave:
       case requestTypes.remoteDisconnect:
-<span class="cstat-no" title="statement not covered">        clearTimeout(request.timeout);</span>
-<span class="cstat-no" title="statement not covered">        if (request.callback) <span class="cstat-no" title="statement not covered">process.nextTick(request.callback.bind(null, null));</span></span>
-<span class="cstat-no" title="statement not covered">        delete self.requests[request.requestid];</span>
-<span class="cstat-no" title="statement not covered">        break;</span>
+<span class="cstat-no" title="statement not covered" >        clearTimeout(request.timeout);</span>
+<span class="cstat-no" title="statement not covered" >        if (request.callback) <span class="cstat-no" title="statement not covered" >process.nextTick(request.callback.bind(null, null));</span></span>
+<span class="cstat-no" title="statement not covered" >        delete self.requests[request.requestid];</span>
+<span class="cstat-no" title="statement not covered" >        break;</span>
 &nbsp;
       case requestTypes.customRequest:
-<span class="cstat-no" title="statement not covered">        request.msgCount++;</span>
+<span class="cstat-no" title="statement not covered" >        request.msgCount++;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">        request.replies.push(response.data);</span>
+<span class="cstat-no" title="statement not covered" >        request.replies.push(response.data);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">        if (request.msgCount === request.numsub) {</span>
-<span class="cstat-no" title="statement not covered">          clearTimeout(request.timeout);</span>
-<span class="cstat-no" title="statement not covered">          if (request.callback) <span class="cstat-no" title="statement not covered">process.nextTick(request.callback.bind(null, null, request.replies));</span></span>
-<span class="cstat-no" title="statement not covered">          delete self.requests[request.requestid];</span>
+<span class="cstat-no" title="statement not covered" >        if (request.msgCount === request.numsub) {</span>
+<span class="cstat-no" title="statement not covered" >          clearTimeout(request.timeout);</span>
+<span class="cstat-no" title="statement not covered" >          if (request.callback) <span class="cstat-no" title="statement not covered" >process.nextTick(request.callback.bind(null, null, request.replies));</span></span>
+<span class="cstat-no" title="statement not covered" >          delete self.requests[request.requestid];</span>
         }
-<span class="cstat-no" title="statement not covered">        break;</span>
+<span class="cstat-no" title="statement not covered" >        break;</span>
 &nbsp;
       default:
-<span class="cstat-no" title="statement not covered">        debug('ignoring unknown request type: %s', request.type);</span>
+<span class="cstat-no" title="statement not covered" >        debug('ignoring unknown request type: %s', request.type);</span>
     }
   };
 &nbsp;
@@ -2282,17 +2284,17 @@ var requestTypes = {
    * @api public
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered">  Redis.prototype.broadcast = <span class="fstat-no" title="function not covered">function(packet, opts, remote){</span></span>
-<span class="cstat-no" title="statement not covered">    packet.nsp = this.nsp.name;</span>
-<span class="cstat-no" title="statement not covered">    if (!(remote || (opts &amp;&amp; opts.flags &amp;&amp; opts.flags.local))) {</span>
-<span class="cstat-no" title="statement not covered">      var msg = msgpack.encode([uid, packet, opts]);</span>
-<span class="cstat-no" title="statement not covered">      if (this.withChannelMultiplexing &amp;&amp; opts.rooms &amp;&amp; opts.rooms.length === 1) {</span>
-<span class="cstat-no" title="statement not covered">        pub.publish(this.channel + opts.rooms[0] + '#', msg);</span>
+<span class="cstat-no" title="statement not covered" >  Redis.prototype.broadcast = <span class="fstat-no" title="function not covered" >function(packet, opts, remote){</span></span>
+<span class="cstat-no" title="statement not covered" >    packet.nsp = this.nsp.name;</span>
+<span class="cstat-no" title="statement not covered" >    if (!(remote || (opts &amp;&amp; opts.flags &amp;&amp; opts.flags.local))) {</span>
+<span class="cstat-no" title="statement not covered" >      var msg = msgpack.encode([uid, packet, opts]);</span>
+<span class="cstat-no" title="statement not covered" >      if (this.withChannelMultiplexing &amp;&amp; opts.rooms &amp;&amp; opts.rooms.length === 1) {</span>
+<span class="cstat-no" title="statement not covered" >        pub.publish(this.channel + opts.rooms[0] + '#', msg);</span>
       } else {
-<span class="cstat-no" title="statement not covered">        pub.publish(this.channel, msg);</span>
+<span class="cstat-no" title="statement not covered" >        pub.publish(this.channel, msg);</span>
       }
     }
-<span class="cstat-no" title="statement not covered">    Adapter.prototype.broadcast.call(this, packet, opts);</span>
+<span class="cstat-no" title="statement not covered" >    Adapter.prototype.broadcast.call(this, packet, opts);</span>
   };
 &nbsp;
   /**
@@ -2304,30 +2306,30 @@ var requestTypes = {
    * @api public
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered">  Redis.prototype.add = <span class="fstat-no" title="function not covered">function(id, room, fn){</span></span>
-<span class="cstat-no" title="statement not covered">    debug('adding %s to %s ', id, room);</span>
-<span class="cstat-no" title="statement not covered">    var self = this;</span>
+<span class="cstat-no" title="statement not covered" >  Redis.prototype.add = <span class="fstat-no" title="function not covered" >function(id, room, fn){</span></span>
+<span class="cstat-no" title="statement not covered" >    debug('adding %s to %s ', id, room);</span>
+<span class="cstat-no" title="statement not covered" >    var self = this;</span>
     // subscribe only once per room
-<span class="cstat-no" title="statement not covered">    var alreadyHasRoom = this.rooms.hasOwnProperty(room);</span>
-<span class="cstat-no" title="statement not covered">    Adapter.prototype.add.call(this, id, room);</span>
+<span class="cstat-no" title="statement not covered" >    var alreadyHasRoom = this.rooms.hasOwnProperty(room);</span>
+<span class="cstat-no" title="statement not covered" >    Adapter.prototype.add.call(this, id, room);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (!this.withChannelMultiplexing || alreadyHasRoom) {</span>
-<span class="cstat-no" title="statement not covered">      if (fn) <span class="cstat-no" title="statement not covered">fn(null);</span></span>
-<span class="cstat-no" title="statement not covered">      return;</span>
+<span class="cstat-no" title="statement not covered" >    if (!this.withChannelMultiplexing || alreadyHasRoom) {</span>
+<span class="cstat-no" title="statement not covered" >      if (fn) <span class="cstat-no" title="statement not covered" >fn(null);</span></span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var channel = this.channel + room + '#';</span>
+<span class="cstat-no" title="statement not covered" >    var channel = this.channel + room + '#';</span>
 &nbsp;
-<span class="fstat-no" title="function not covered">    function onSubscribe(err) {</span>
-<span class="cstat-no" title="statement not covered">      if (err) {</span>
-<span class="cstat-no" title="statement not covered">        self.emit('error', err);</span>
-<span class="cstat-no" title="statement not covered">        if (fn) <span class="cstat-no" title="statement not covered">fn(err);</span></span>
-<span class="cstat-no" title="statement not covered">        return;</span>
+<span class="fstat-no" title="function not covered" >    function onSubscribe(err) {</span>
+<span class="cstat-no" title="statement not covered" >      if (err) {</span>
+<span class="cstat-no" title="statement not covered" >        self.emit('error', err);</span>
+<span class="cstat-no" title="statement not covered" >        if (fn) <span class="cstat-no" title="statement not covered" >fn(err);</span></span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
       }
-<span class="cstat-no" title="statement not covered">      if (fn) <span class="cstat-no" title="statement not covered">fn(null);</span></span>
+<span class="cstat-no" title="statement not covered" >      if (fn) <span class="cstat-no" title="statement not covered" >fn(null);</span></span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    sub.subscribe(channel, onSubscribe);</span>
+<span class="cstat-no" title="statement not covered" >    sub.subscribe(channel, onSubscribe);</span>
   };
 &nbsp;
   /**
@@ -2339,28 +2341,28 @@ var requestTypes = {
    * @api public
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered">  Redis.prototype.del = <span class="fstat-no" title="function not covered">function(id, room, fn){</span></span>
-<span class="cstat-no" title="statement not covered">    debug('removing %s from %s', id, room);</span>
+<span class="cstat-no" title="statement not covered" >  Redis.prototype.del = <span class="fstat-no" title="function not covered" >function(id, room, fn){</span></span>
+<span class="cstat-no" title="statement not covered" >    debug('removing %s from %s', id, room);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var self = this;</span>
-<span class="cstat-no" title="statement not covered">    var hasRoom = this.rooms.hasOwnProperty(room);</span>
-<span class="cstat-no" title="statement not covered">    Adapter.prototype.del.call(this, id, room);</span>
+<span class="cstat-no" title="statement not covered" >    var self = this;</span>
+<span class="cstat-no" title="statement not covered" >    var hasRoom = this.rooms.hasOwnProperty(room);</span>
+<span class="cstat-no" title="statement not covered" >    Adapter.prototype.del.call(this, id, room);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (this.withChannelMultiplexing &amp;&amp; hasRoom &amp;&amp; !this.rooms[room]) {</span>
-<span class="cstat-no" title="statement not covered">      var channel = this.channel + room + '#';</span>
+<span class="cstat-no" title="statement not covered" >    if (this.withChannelMultiplexing &amp;&amp; hasRoom &amp;&amp; !this.rooms[room]) {</span>
+<span class="cstat-no" title="statement not covered" >      var channel = this.channel + room + '#';</span>
 &nbsp;
-<span class="fstat-no" title="function not covered">      function onUnsubscribe(err) {</span>
-<span class="cstat-no" title="statement not covered">        if (err) {</span>
-<span class="cstat-no" title="statement not covered">          self.emit('error', err);</span>
-<span class="cstat-no" title="statement not covered">          if (fn) <span class="cstat-no" title="statement not covered">fn(err);</span></span>
-<span class="cstat-no" title="statement not covered">          return;</span>
+<span class="fstat-no" title="function not covered" >      function onUnsubscribe(err) {</span>
+<span class="cstat-no" title="statement not covered" >        if (err) {</span>
+<span class="cstat-no" title="statement not covered" >          self.emit('error', err);</span>
+<span class="cstat-no" title="statement not covered" >          if (fn) <span class="cstat-no" title="statement not covered" >fn(err);</span></span>
+<span class="cstat-no" title="statement not covered" >          return;</span>
         }
-<span class="cstat-no" title="statement not covered">        if (fn) <span class="cstat-no" title="statement not covered">fn(null);</span></span>
+<span class="cstat-no" title="statement not covered" >        if (fn) <span class="cstat-no" title="statement not covered" >fn(null);</span></span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered">      sub.unsubscribe(channel, onUnsubscribe);</span>
+<span class="cstat-no" title="statement not covered" >      sub.unsubscribe(channel, onUnsubscribe);</span>
     } else {
-<span class="cstat-no" title="statement not covered">      if (fn) <span class="cstat-no" title="statement not covered">process.nextTick(fn.bind(null, null));</span></span>
+<span class="cstat-no" title="statement not covered" >      if (fn) <span class="cstat-no" title="statement not covered" >process.nextTick(fn.bind(null, null));</span></span>
     }
   };
 &nbsp;
@@ -2372,27 +2374,27 @@ var requestTypes = {
    * @api public
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered">  Redis.prototype.delAll = <span class="fstat-no" title="function not covered">function(id, fn){</span></span>
-<span class="cstat-no" title="statement not covered">    debug('removing %s from all rooms', id);</span>
+<span class="cstat-no" title="statement not covered" >  Redis.prototype.delAll = <span class="fstat-no" title="function not covered" >function(id, fn){</span></span>
+<span class="cstat-no" title="statement not covered" >    debug('removing %s from all rooms', id);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var self = this;</span>
-<span class="cstat-no" title="statement not covered">    var rooms = this.sids[id];</span>
+<span class="cstat-no" title="statement not covered" >    var self = this;</span>
+<span class="cstat-no" title="statement not covered" >    var rooms = this.sids[id];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (!rooms) {</span>
-<span class="cstat-no" title="statement not covered">      if (fn) <span class="cstat-no" title="statement not covered">process.nextTick(fn.bind(null, null));</span></span>
-<span class="cstat-no" title="statement not covered">      return;</span>
+<span class="cstat-no" title="statement not covered" >    if (!rooms) {</span>
+<span class="cstat-no" title="statement not covered" >      if (fn) <span class="cstat-no" title="statement not covered" >process.nextTick(fn.bind(null, null));</span></span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    async.each(Object.keys(rooms), <span class="fstat-no" title="function not covered">function(room, next){</span></span>
-<span class="cstat-no" title="statement not covered">      self.del(id, room, next);</span>
-    }, <span class="fstat-no" title="function not covered">function(err){</span>
-<span class="cstat-no" title="statement not covered">      if (err) {</span>
-<span class="cstat-no" title="statement not covered">        self.emit('error', err);</span>
-<span class="cstat-no" title="statement not covered">        if (fn) <span class="cstat-no" title="statement not covered">fn(err);</span></span>
-<span class="cstat-no" title="statement not covered">        return;</span>
+<span class="cstat-no" title="statement not covered" >    async.each(Object.keys(rooms), <span class="fstat-no" title="function not covered" >function(room, next){</span></span>
+<span class="cstat-no" title="statement not covered" >      self.del(id, room, next);</span>
+    }, <span class="fstat-no" title="function not covered" >function(err){</span>
+<span class="cstat-no" title="statement not covered" >      if (err) {</span>
+<span class="cstat-no" title="statement not covered" >        self.emit('error', err);</span>
+<span class="cstat-no" title="statement not covered" >        if (fn) <span class="cstat-no" title="statement not covered" >fn(err);</span></span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
       }
-<span class="cstat-no" title="statement not covered">      delete self.sids[id];</span>
-<span class="cstat-no" title="statement not covered">      if (fn) <span class="cstat-no" title="statement not covered">fn(null);</span></span>
+<span class="cstat-no" title="statement not covered" >      delete self.sids[id];</span>
+<span class="cstat-no" title="statement not covered" >      if (fn) <span class="cstat-no" title="statement not covered" >fn(null);</span></span>
     });
   };
 &nbsp;
@@ -2404,40 +2406,40 @@ var requestTypes = {
    * @api public
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered">  Redis.prototype.clients = <span class="fstat-no" title="function not covered">function(rooms, fn){</span></span>
-<span class="cstat-no" title="statement not covered">    if ('function' == typeof rooms){</span>
-<span class="cstat-no" title="statement not covered">      fn = rooms;</span>
-<span class="cstat-no" title="statement not covered">      rooms = null;</span>
+<span class="cstat-no" title="statement not covered" >  Redis.prototype.clients = <span class="fstat-no" title="function not covered" >function(rooms, fn){</span></span>
+<span class="cstat-no" title="statement not covered" >    if ('function' == typeof rooms){</span>
+<span class="cstat-no" title="statement not covered" >      fn = rooms;</span>
+<span class="cstat-no" title="statement not covered" >      rooms = null;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    rooms = rooms || [];</span>
+<span class="cstat-no" title="statement not covered" >    rooms = rooms || [];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var self = this;</span>
-<span class="cstat-no" title="statement not covered">    var requestid = uid2(6);</span>
+<span class="cstat-no" title="statement not covered" >    var self = this;</span>
+<span class="cstat-no" title="statement not covered" >    var requestid = uid2(6);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    pub.send_command('pubsub', ['numsub', self.requestChannel], <span class="fstat-no" title="function not covered">function(err, numsub){</span></span>
-<span class="cstat-no" title="statement not covered">      if (err) {</span>
-<span class="cstat-no" title="statement not covered">        self.emit('error', err);</span>
-<span class="cstat-no" title="statement not covered">        if (fn) <span class="cstat-no" title="statement not covered">fn(err);</span></span>
-<span class="cstat-no" title="statement not covered">        return;</span>
+<span class="cstat-no" title="statement not covered" >    pub.send_command('pubsub', ['numsub', self.requestChannel], <span class="fstat-no" title="function not covered" >function(err, numsub){</span></span>
+<span class="cstat-no" title="statement not covered" >      if (err) {</span>
+<span class="cstat-no" title="statement not covered" >        self.emit('error', err);</span>
+<span class="cstat-no" title="statement not covered" >        if (fn) <span class="cstat-no" title="statement not covered" >fn(err);</span></span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered">      numsub = parseInt(numsub[1], 10);</span>
+<span class="cstat-no" title="statement not covered" >      numsub = parseInt(numsub[1], 10);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">      var request = JSON.stringify({</span>
+<span class="cstat-no" title="statement not covered" >      var request = JSON.stringify({</span>
         requestid : requestid,
         type: requestTypes.clients,
         rooms : rooms
       });
 &nbsp;
       // if there is no response for x second, return result
-<span class="cstat-no" title="statement not covered">      var timeout = setTimeout(<span class="fstat-no" title="function not covered">function() {</span></span>
-<span class="cstat-no" title="statement not covered">        var request = self.requests[requestid];</span>
-<span class="cstat-no" title="statement not covered">        if (fn) <span class="cstat-no" title="statement not covered">process.nextTick(fn.bind(null, new Error('timeout reached while waiting for clients response'), Object.keys(request.clients)));</span></span>
-<span class="cstat-no" title="statement not covered">        delete self.requests[requestid];</span>
+<span class="cstat-no" title="statement not covered" >      var timeout = setTimeout(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        var request = self.requests[requestid];</span>
+<span class="cstat-no" title="statement not covered" >        if (fn) <span class="cstat-no" title="statement not covered" >process.nextTick(fn.bind(null, new Error('timeout reached while waiting for clients response'), Object.keys(request.clients)));</span></span>
+<span class="cstat-no" title="statement not covered" >        delete self.requests[requestid];</span>
       }, self.requestsTimeout);
 &nbsp;
-<span class="cstat-no" title="statement not covered">      self.requests[requestid] = {</span>
+<span class="cstat-no" title="statement not covered" >      self.requests[requestid] = {</span>
         type: requestTypes.clients,
         numsub: numsub,
         msgCount: 0,
@@ -2446,7 +2448,7 @@ var requestTypes = {
         timeout: timeout
       };
 &nbsp;
-<span class="cstat-no" title="statement not covered">      pub.publish(self.requestChannel, request);</span>
+<span class="cstat-no" title="statement not covered" >      pub.publish(self.requestChannel, request);</span>
     });
   };
 &nbsp;
@@ -2458,37 +2460,37 @@ var requestTypes = {
    * @api public
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered">  Redis.prototype.clientRooms = <span class="fstat-no" title="function not covered">function(id, fn){</span></span>
+<span class="cstat-no" title="statement not covered" >  Redis.prototype.clientRooms = <span class="fstat-no" title="function not covered" >function(id, fn){</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var self = this;</span>
-<span class="cstat-no" title="statement not covered">    var requestid = uid2(6);</span>
+<span class="cstat-no" title="statement not covered" >    var self = this;</span>
+<span class="cstat-no" title="statement not covered" >    var requestid = uid2(6);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var rooms = this.sids[id];</span>
+<span class="cstat-no" title="statement not covered" >    var rooms = this.sids[id];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (rooms) {</span>
-<span class="cstat-no" title="statement not covered">      if (fn) <span class="cstat-no" title="statement not covered">process.nextTick(fn.bind(null, null, Object.keys(rooms)));</span></span>
-<span class="cstat-no" title="statement not covered">      return;</span>
+<span class="cstat-no" title="statement not covered" >    if (rooms) {</span>
+<span class="cstat-no" title="statement not covered" >      if (fn) <span class="cstat-no" title="statement not covered" >process.nextTick(fn.bind(null, null, Object.keys(rooms)));</span></span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var request = JSON.stringify({</span>
+<span class="cstat-no" title="statement not covered" >    var request = JSON.stringify({</span>
       requestid : requestid,
       type: requestTypes.clientRooms,
       sid : id
     });
 &nbsp;
     // if there is no response for x second, return result
-<span class="cstat-no" title="statement not covered">    var timeout = setTimeout(<span class="fstat-no" title="function not covered">function() {</span></span>
-<span class="cstat-no" title="statement not covered">      if (fn) <span class="cstat-no" title="statement not covered">process.nextTick(fn.bind(null, new Error('timeout reached while waiting for rooms response')));</span></span>
-<span class="cstat-no" title="statement not covered">      delete self.requests[requestid];</span>
+<span class="cstat-no" title="statement not covered" >    var timeout = setTimeout(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (fn) <span class="cstat-no" title="statement not covered" >process.nextTick(fn.bind(null, new Error('timeout reached while waiting for rooms response')));</span></span>
+<span class="cstat-no" title="statement not covered" >      delete self.requests[requestid];</span>
     }, self.requestsTimeout);
 &nbsp;
-<span class="cstat-no" title="statement not covered">    self.requests[requestid] = {</span>
+<span class="cstat-no" title="statement not covered" >    self.requests[requestid] = {</span>
       type: requestTypes.clientRooms,
       callback: fn,
       timeout: timeout
     };
 &nbsp;
-<span class="cstat-no" title="statement not covered">    pub.publish(self.requestChannel, request);</span>
+<span class="cstat-no" title="statement not covered" >    pub.publish(self.requestChannel, request);</span>
   };
 &nbsp;
   /**
@@ -2498,33 +2500,33 @@ var requestTypes = {
    * @api public
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered">  Redis.prototype.allRooms = <span class="fstat-no" title="function not covered">function(fn){</span></span>
+<span class="cstat-no" title="statement not covered" >  Redis.prototype.allRooms = <span class="fstat-no" title="function not covered" >function(fn){</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var self = this;</span>
-<span class="cstat-no" title="statement not covered">    var requestid = uid2(6);</span>
+<span class="cstat-no" title="statement not covered" >    var self = this;</span>
+<span class="cstat-no" title="statement not covered" >    var requestid = uid2(6);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    pub.send_command('pubsub', ['numsub', self.requestChannel], <span class="fstat-no" title="function not covered">function(err, numsub){</span></span>
-<span class="cstat-no" title="statement not covered">      if (err) {</span>
-<span class="cstat-no" title="statement not covered">        self.emit('error', err);</span>
-<span class="cstat-no" title="statement not covered">        if (fn) <span class="cstat-no" title="statement not covered">fn(err);</span></span>
-<span class="cstat-no" title="statement not covered">        return;</span>
+<span class="cstat-no" title="statement not covered" >    pub.send_command('pubsub', ['numsub', self.requestChannel], <span class="fstat-no" title="function not covered" >function(err, numsub){</span></span>
+<span class="cstat-no" title="statement not covered" >      if (err) {</span>
+<span class="cstat-no" title="statement not covered" >        self.emit('error', err);</span>
+<span class="cstat-no" title="statement not covered" >        if (fn) <span class="cstat-no" title="statement not covered" >fn(err);</span></span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered">      numsub = parseInt(numsub[1], 10);</span>
+<span class="cstat-no" title="statement not covered" >      numsub = parseInt(numsub[1], 10);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">      var request = JSON.stringify({</span>
+<span class="cstat-no" title="statement not covered" >      var request = JSON.stringify({</span>
         requestid : requestid,
         type: requestTypes.allRooms
       });
 &nbsp;
       // if there is no response for x second, return result
-<span class="cstat-no" title="statement not covered">      var timeout = setTimeout(<span class="fstat-no" title="function not covered">function() {</span></span>
-<span class="cstat-no" title="statement not covered">        var request = self.requests[requestid];</span>
-<span class="cstat-no" title="statement not covered">        if (fn) <span class="cstat-no" title="statement not covered">process.nextTick(fn.bind(null, new Error('timeout reached while waiting for allRooms response'), Object.keys(request.rooms)));</span></span>
-<span class="cstat-no" title="statement not covered">        delete self.requests[requestid];</span>
+<span class="cstat-no" title="statement not covered" >      var timeout = setTimeout(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        var request = self.requests[requestid];</span>
+<span class="cstat-no" title="statement not covered" >        if (fn) <span class="cstat-no" title="statement not covered" >process.nextTick(fn.bind(null, new Error('timeout reached while waiting for allRooms response'), Object.keys(request.rooms)));</span></span>
+<span class="cstat-no" title="statement not covered" >        delete self.requests[requestid];</span>
       }, self.requestsTimeout);
 &nbsp;
-<span class="cstat-no" title="statement not covered">      self.requests[requestid] = {</span>
+<span class="cstat-no" title="statement not covered" >      self.requests[requestid] = {</span>
         type: requestTypes.allRooms,
         numsub: numsub,
         msgCount: 0,
@@ -2533,7 +2535,7 @@ var requestTypes = {
         timeout: timeout
       };
 &nbsp;
-<span class="cstat-no" title="statement not covered">      pub.publish(self.requestChannel, request);</span>
+<span class="cstat-no" title="statement not covered" >      pub.publish(self.requestChannel, request);</span>
     });
   };
 &nbsp;
@@ -2546,18 +2548,18 @@ var requestTypes = {
    * @api public
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered">  Redis.prototype.remoteJoin = <span class="fstat-no" title="function not covered">function(id, room, fn){</span></span>
+<span class="cstat-no" title="statement not covered" >  Redis.prototype.remoteJoin = <span class="fstat-no" title="function not covered" >function(id, room, fn){</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var self = this;</span>
-<span class="cstat-no" title="statement not covered">    var requestid = uid2(6);</span>
+<span class="cstat-no" title="statement not covered" >    var self = this;</span>
+<span class="cstat-no" title="statement not covered" >    var requestid = uid2(6);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var socket = this.nsp.connected[id];</span>
-<span class="cstat-no" title="statement not covered">    if (socket) {</span>
-<span class="cstat-no" title="statement not covered">      socket.join(room, fn);</span>
-<span class="cstat-no" title="statement not covered">      return;</span>
+<span class="cstat-no" title="statement not covered" >    var socket = this.nsp.connected[id];</span>
+<span class="cstat-no" title="statement not covered" >    if (socket) {</span>
+<span class="cstat-no" title="statement not covered" >      socket.join(room, fn);</span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var request = JSON.stringify({</span>
+<span class="cstat-no" title="statement not covered" >    var request = JSON.stringify({</span>
       requestid : requestid,
       type: requestTypes.remoteJoin,
       sid: id,
@@ -2565,18 +2567,18 @@ var requestTypes = {
     });
 &nbsp;
     // if there is no response for x second, return result
-<span class="cstat-no" title="statement not covered">    var timeout = setTimeout(<span class="fstat-no" title="function not covered">function() {</span></span>
-<span class="cstat-no" title="statement not covered">      if (fn) <span class="cstat-no" title="statement not covered">process.nextTick(fn.bind(null, new Error('timeout reached while waiting for remoteJoin response')));</span></span>
-<span class="cstat-no" title="statement not covered">      delete self.requests[requestid];</span>
+<span class="cstat-no" title="statement not covered" >    var timeout = setTimeout(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (fn) <span class="cstat-no" title="statement not covered" >process.nextTick(fn.bind(null, new Error('timeout reached while waiting for remoteJoin response')));</span></span>
+<span class="cstat-no" title="statement not covered" >      delete self.requests[requestid];</span>
     }, self.requestsTimeout);
 &nbsp;
-<span class="cstat-no" title="statement not covered">    self.requests[requestid] = {</span>
+<span class="cstat-no" title="statement not covered" >    self.requests[requestid] = {</span>
       type: requestTypes.remoteJoin,
       callback: fn,
       timeout: timeout
     };
 &nbsp;
-<span class="cstat-no" title="statement not covered">    pub.publish(self.requestChannel, request);</span>
+<span class="cstat-no" title="statement not covered" >    pub.publish(self.requestChannel, request);</span>
   };
 &nbsp;
   /**
@@ -2588,18 +2590,18 @@ var requestTypes = {
    * @api public
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered">  Redis.prototype.remoteLeave = <span class="fstat-no" title="function not covered">function(id, room, fn){</span></span>
+<span class="cstat-no" title="statement not covered" >  Redis.prototype.remoteLeave = <span class="fstat-no" title="function not covered" >function(id, room, fn){</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var self = this;</span>
-<span class="cstat-no" title="statement not covered">    var requestid = uid2(6);</span>
+<span class="cstat-no" title="statement not covered" >    var self = this;</span>
+<span class="cstat-no" title="statement not covered" >    var requestid = uid2(6);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var socket = this.nsp.connected[id];</span>
-<span class="cstat-no" title="statement not covered">    if (socket) {</span>
-<span class="cstat-no" title="statement not covered">      socket.leave(room, fn);</span>
-<span class="cstat-no" title="statement not covered">      return;</span>
+<span class="cstat-no" title="statement not covered" >    var socket = this.nsp.connected[id];</span>
+<span class="cstat-no" title="statement not covered" >    if (socket) {</span>
+<span class="cstat-no" title="statement not covered" >      socket.leave(room, fn);</span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var request = JSON.stringify({</span>
+<span class="cstat-no" title="statement not covered" >    var request = JSON.stringify({</span>
       requestid : requestid,
       type: requestTypes.remoteLeave,
       sid: id,
@@ -2607,18 +2609,18 @@ var requestTypes = {
     });
 &nbsp;
     // if there is no response for x second, return result
-<span class="cstat-no" title="statement not covered">    var timeout = setTimeout(<span class="fstat-no" title="function not covered">function() {</span></span>
-<span class="cstat-no" title="statement not covered">      if (fn) <span class="cstat-no" title="statement not covered">process.nextTick(fn.bind(null, new Error('timeout reached while waiting for remoteLeave response')));</span></span>
-<span class="cstat-no" title="statement not covered">      delete self.requests[requestid];</span>
+<span class="cstat-no" title="statement not covered" >    var timeout = setTimeout(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (fn) <span class="cstat-no" title="statement not covered" >process.nextTick(fn.bind(null, new Error('timeout reached while waiting for remoteLeave response')));</span></span>
+<span class="cstat-no" title="statement not covered" >      delete self.requests[requestid];</span>
     }, self.requestsTimeout);
 &nbsp;
-<span class="cstat-no" title="statement not covered">    self.requests[requestid] = {</span>
+<span class="cstat-no" title="statement not covered" >    self.requests[requestid] = {</span>
       type: requestTypes.remoteLeave,
       callback: fn,
       timeout: timeout
     };
 &nbsp;
-<span class="cstat-no" title="statement not covered">    pub.publish(self.requestChannel, request);</span>
+<span class="cstat-no" title="statement not covered" >    pub.publish(self.requestChannel, request);</span>
   };
 &nbsp;
   /**
@@ -2628,18 +2630,18 @@ var requestTypes = {
    * @param {Function} callback
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered">  Redis.prototype.remoteDisconnect = <span class="fstat-no" title="function not covered">function(id, close, fn) {</span></span>
-<span class="cstat-no" title="statement not covered">    var self = this;</span>
-<span class="cstat-no" title="statement not covered">    var requestid = uid2(6);</span>
+<span class="cstat-no" title="statement not covered" >  Redis.prototype.remoteDisconnect = <span class="fstat-no" title="function not covered" >function(id, close, fn) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var self = this;</span>
+<span class="cstat-no" title="statement not covered" >    var requestid = uid2(6);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var socket = this.nsp.connected[id];</span>
-<span class="cstat-no" title="statement not covered">    if(socket) {</span>
-<span class="cstat-no" title="statement not covered">      socket.disconnect(close);</span>
-<span class="cstat-no" title="statement not covered">      if (fn) <span class="cstat-no" title="statement not covered">process.nextTick(fn.bind(null, null));</span></span>
-<span class="cstat-no" title="statement not covered">      return;</span>
+<span class="cstat-no" title="statement not covered" >    var socket = this.nsp.connected[id];</span>
+<span class="cstat-no" title="statement not covered" >    if(socket) {</span>
+<span class="cstat-no" title="statement not covered" >      socket.disconnect(close);</span>
+<span class="cstat-no" title="statement not covered" >      if (fn) <span class="cstat-no" title="statement not covered" >process.nextTick(fn.bind(null, null));</span></span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var request = JSON.stringify({</span>
+<span class="cstat-no" title="statement not covered" >    var request = JSON.stringify({</span>
       requestid : requestid,
       type: requestTypes.remoteDisconnect,
       sid: id,
@@ -2647,18 +2649,18 @@ var requestTypes = {
     });
 &nbsp;
     // if there is no response for x second, return result
-<span class="cstat-no" title="statement not covered">    var timeout = setTimeout(<span class="fstat-no" title="function not covered">function() {</span></span>
-<span class="cstat-no" title="statement not covered">      if (fn) <span class="cstat-no" title="statement not covered">process.nextTick(fn.bind(null, new Error('timeout reached while waiting for remoteDisconnect response')));</span></span>
-<span class="cstat-no" title="statement not covered">      delete self.requests[requestid];</span>
+<span class="cstat-no" title="statement not covered" >    var timeout = setTimeout(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (fn) <span class="cstat-no" title="statement not covered" >process.nextTick(fn.bind(null, new Error('timeout reached while waiting for remoteDisconnect response')));</span></span>
+<span class="cstat-no" title="statement not covered" >      delete self.requests[requestid];</span>
     }, self.requestsTimeout);
 &nbsp;
-<span class="cstat-no" title="statement not covered">    self.requests[requestid] = {</span>
+<span class="cstat-no" title="statement not covered" >    self.requests[requestid] = {</span>
       type: requestTypes.remoteDisconnect,
       callback: fn,
       timeout: timeout
     };
 &nbsp;
-<span class="cstat-no" title="statement not covered">    pub.publish(self.requestChannel, request);</span>
+<span class="cstat-no" title="statement not covered" >    pub.publish(self.requestChannel, request);</span>
   };
 &nbsp;
   /**
@@ -2669,38 +2671,38 @@ var requestTypes = {
    * @api public
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered">  Redis.prototype.customRequest = <span class="fstat-no" title="function not covered">function(data, fn){</span></span>
-<span class="cstat-no" title="statement not covered">    if (typeof data === 'function'){</span>
-<span class="cstat-no" title="statement not covered">      fn = data;</span>
-<span class="cstat-no" title="statement not covered">      data = null;</span>
+<span class="cstat-no" title="statement not covered" >  Redis.prototype.customRequest = <span class="fstat-no" title="function not covered" >function(data, fn){</span></span>
+<span class="cstat-no" title="statement not covered" >    if (typeof data === 'function'){</span>
+<span class="cstat-no" title="statement not covered" >      fn = data;</span>
+<span class="cstat-no" title="statement not covered" >      data = null;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var self = this;</span>
-<span class="cstat-no" title="statement not covered">    var requestid = uid2(6);</span>
+<span class="cstat-no" title="statement not covered" >    var self = this;</span>
+<span class="cstat-no" title="statement not covered" >    var requestid = uid2(6);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    pub.send_command('pubsub', ['numsub', self.requestChannel], <span class="fstat-no" title="function not covered">function(err, numsub){</span></span>
-<span class="cstat-no" title="statement not covered">      if (err) {</span>
-<span class="cstat-no" title="statement not covered">        self.emit('error', err);</span>
-<span class="cstat-no" title="statement not covered">        if (fn) <span class="cstat-no" title="statement not covered">fn(err);</span></span>
-<span class="cstat-no" title="statement not covered">        return;</span>
+<span class="cstat-no" title="statement not covered" >    pub.send_command('pubsub', ['numsub', self.requestChannel], <span class="fstat-no" title="function not covered" >function(err, numsub){</span></span>
+<span class="cstat-no" title="statement not covered" >      if (err) {</span>
+<span class="cstat-no" title="statement not covered" >        self.emit('error', err);</span>
+<span class="cstat-no" title="statement not covered" >        if (fn) <span class="cstat-no" title="statement not covered" >fn(err);</span></span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered">      numsub = parseInt(numsub[1], 10);</span>
+<span class="cstat-no" title="statement not covered" >      numsub = parseInt(numsub[1], 10);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">      var request = JSON.stringify({</span>
+<span class="cstat-no" title="statement not covered" >      var request = JSON.stringify({</span>
         requestid : requestid,
         type: requestTypes.customRequest,
         data: data
       });
 &nbsp;
       // if there is no response for x second, return result
-<span class="cstat-no" title="statement not covered">      var timeout = setTimeout(<span class="fstat-no" title="function not covered">function() {</span></span>
-<span class="cstat-no" title="statement not covered">        var request = self.requests[requestid];</span>
-<span class="cstat-no" title="statement not covered">        if (fn) <span class="cstat-no" title="statement not covered">process.nextTick(fn.bind(null, new Error('timeout reached while waiting for customRequest response'), request.replies));</span></span>
-<span class="cstat-no" title="statement not covered">        delete self.requests[requestid];</span>
+<span class="cstat-no" title="statement not covered" >      var timeout = setTimeout(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        var request = self.requests[requestid];</span>
+<span class="cstat-no" title="statement not covered" >        if (fn) <span class="cstat-no" title="statement not covered" >process.nextTick(fn.bind(null, new Error('timeout reached while waiting for customRequest response'), request.replies));</span></span>
+<span class="cstat-no" title="statement not covered" >        delete self.requests[requestid];</span>
       }, self.requestsTimeout);
 &nbsp;
-<span class="cstat-no" title="statement not covered">      self.requests[requestid] = {</span>
+<span class="cstat-no" title="statement not covered" >      self.requests[requestid] = {</span>
         type: requestTypes.customRequest,
         numsub: numsub,
         msgCount: 0,
@@ -2709,26 +2711,25 @@ var requestTypes = {
         timeout: timeout
       };
 &nbsp;
-<span class="cstat-no" title="statement not covered">      pub.publish(self.requestChannel, request);</span>
+<span class="cstat-no" title="statement not covered" >      pub.publish(self.requestChannel, request);</span>
     });
   };
 &nbsp;
-<span class="cstat-no" title="statement not covered">  Redis.uid = uid;</span>
-<span class="cstat-no" title="statement not covered">  Redis.pubClient = pub;</span>
-<span class="cstat-no" title="statement not covered">  Redis.subClient = sub;</span>
-<span class="cstat-no" title="statement not covered">  Redis.prefix = prefix;</span>
-<span class="cstat-no" title="statement not covered">  Redis.requestsTimeout = requestsTimeout;</span>
+<span class="cstat-no" title="statement not covered" >  Redis.uid = uid;</span>
+<span class="cstat-no" title="statement not covered" >  Redis.pubClient = pub;</span>
+<span class="cstat-no" title="statement not covered" >  Redis.subClient = sub;</span>
+<span class="cstat-no" title="statement not covered" >  Redis.prefix = prefix;</span>
+<span class="cstat-no" title="statement not covered" >  Redis.requestsTimeout = requestsTimeout;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return Redis;</span>
+<span class="cstat-no" title="statement not covered" >  return Redis;</span>
 &nbsp;
 }
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 16:57:53 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 20:59:55 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
