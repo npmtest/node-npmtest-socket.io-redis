@@ -1,7 +1,10 @@
-# test coverage for  [socket.io-redis (v4.0.0)](https://github.com/socketio/socket.io-redis#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-socket.io-redis.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-socket.io-redis) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-socket.io-redis.svg)](https://travis-ci.org/npmtest/node-npmtest-socket.io-redis)
+# npmtest-socket.io-redis
+
+#### test coverage for  [socket.io-redis (v4.0.0)](https://github.com/socketio/socket.io-redis#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-socket.io-redis.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-socket.io-redis) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-socket.io-redis.svg)](https://travis-ci.org/npmtest/node-npmtest-socket.io-redis)
+
 #### [![Build Status](https://travis-ci.org/socketio/socket.io-redis.svg?branch=master)](https://travis-ci.org/socketio/socket.io-redis) [![NPM version](https://badge.fury.io/js/socket.io-redis.svg)](http://badge.fury.io/js/socket.io-redis)
 
-[![NPM](https://nodei.co/npm/socket.io-redis.png?downloads=true)](https://www.npmjs.com/package/socket.io-redis)
+[![NPM](https://nodei.co/npm/socket.io-redis.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/socket.io-redis)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-socket.io-redis/tree/alpha)|
 |--:|:--|
@@ -9,11 +12,17 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-socket.io-redis/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-socket.io-redis/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-socket.io-redis/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-socket.io-redis/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-socket.io-redis/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-socket.io-redis/build/coverage.html/index.html)
+- [https://npmtest.github.io/node-npmtest-socket.io-redis/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-socket.io-redis/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-socket.io-redis/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-socket.io-redis%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-socket.io-redis/build/test-report.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-socket.io-redis/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-socket.io-redis/build/coverage.html/index.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-socket.io-redis/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-socket.io-redis%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-socket.io-redis/build/apidoc.html)
+- [https://npmtest.github.io/node-npmtest-socket.io-redis/build/test-report.html](https://npmtest.github.io/node-npmtest-socket.io-redis/build/test-report.html)
+
+[![test-report](https://npmtest.github.io/node-npmtest-socket.io-redis/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-socket.io-redis/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-socket.io-redis/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-socket.io-redis/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-socket.io-redis/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-socket.io-redis/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-socket.io-redis/build/screenCapture.npmPackageListing.svg)
 
@@ -58,17 +67,14 @@
     "license": "MIT",
     "maintainers": [
         {
-            "name": "darrachequesne",
-            "email": "damien.arrachequesne@gmail.com"
+            "name": "darrachequesne"
         },
         {
-            "name": "rauchg",
-            "email": "rauchg@gmail.com"
+            "name": "rauchg"
         }
     ],
     "name": "socket.io-redis",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+ssh://git@github.com/socketio/socket.io-redis.git"
