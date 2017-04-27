@@ -1,6 +1,6 @@
 # npmtest-socket.io-redis
 
-#### test coverage for  [socket.io-redis (v4.0.0)](https://github.com/socketio/socket.io-redis#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-socket.io-redis.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-socket.io-redis) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-socket.io-redis.svg)](https://travis-ci.org/npmtest/node-npmtest-socket.io-redis)
+#### basic test coverage for  [socket.io-redis (v4.0.0)](https://github.com/socketio/socket.io-redis#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-socket.io-redis.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-socket.io-redis) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-socket.io-redis.svg)](https://travis-ci.org/npmtest/node-npmtest-socket.io-redis)
 
 #### [![Build Status](https://travis-ci.org/socketio/socket.io-redis.svg?branch=master)](https://travis-ci.org/socketio/socket.io-redis) [![NPM version](https://badge.fury.io/js/socket.io-redis.svg)](http://badge.fury.io/js/socket.io-redis)
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-socket.io-redis/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-socket.io-redis/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-socket.io-redis/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-socket.io-redis/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-socket.io-redis/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-socket.io-redis/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-socket.io-redis/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-socket.io-redis/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-socket.io-redis/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-socket.io-redis/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-socket.io-redis/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-socket.io-redis/build/coverage.html/index.html)
 
@@ -82,7 +82,8 @@
     "scripts": {
         "test": "mocha"
     },
-    "version": "4.0.0"
+    "version": "4.0.0",
+    "bin": {}
 }
 ```
 
